@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FotoActivityFinal"
+    >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/app_bar"
+            style="@style/Widget.CoolStuff.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:title="FOTO" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="359dp"
+            android:layout_height="534dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/button_camara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CAMARA"
+            tools:layout_editor_absoluteX="256dp"
+            tools:layout_editor_absoluteY="646dp"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/button_galeria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="GALERIA"
+            android:textColor="@color/black"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="646dp" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+</FrameLayout>

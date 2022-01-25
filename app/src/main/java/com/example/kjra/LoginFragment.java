@@ -1,4 +1,5 @@
 package com.example.kjra;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.KeyEvent;
@@ -23,7 +24,7 @@ public class LoginFragment extends Fragment
         View view = inflater.inflate(R.layout.login_inicio, container, false);
         final TextInputLayout passwordTextInput = view.findViewById(R.id.password_text_imput);
         final TextInputEditText passwordTextEditText = view.findViewById(R.id.password_edit_text);
-        MaterialButton nextButton = view.findViewById(R.id.next_button);
+        MaterialButton nextButton = view.findViewById(R.id.galeria_button);
 
         nextButton.setOnClickListener(new View.OnClickListener(){
 
@@ -33,7 +34,8 @@ public class LoginFragment extends Fragment
                     passwordTextInput.setError(getString(R.string.error_password));
                 }else{
                     passwordTextInput.setError(null);
-                    ((Navigation) getActivity()).navigateTo(new PrinciFragment(), false);
+                    Intent intent = new Intent(getActivity(), MenuActivity.class);
+                    startActivity(intent);
                 }
             }
         });
